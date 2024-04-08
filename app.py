@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request
 import requests
-from flask_cors import CORS
+
 
 app = Flask(__name__)
-CORS(app)
+
 
 # Endpoint to retrieve country information
 @app.route('/country-info', methods=['GET'])
