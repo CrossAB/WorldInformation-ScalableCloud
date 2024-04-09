@@ -2,11 +2,11 @@ from flask import Flask, jsonify, request
 import requests
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 # Endpoint to retrieve country information
-@app.route('/country-info', methods=['GET'])
+@application.route('/country-info', methods=['GET'])
 def country_info():
     country_name = request.args.get('country')  # Get country name from query parameter
     if not country_name:
@@ -40,6 +40,6 @@ def country_info():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
 
 #http://127.0.0.1:5000/country-info?country=Canada
